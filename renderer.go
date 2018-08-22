@@ -3,8 +3,8 @@ package chart
 import (
 	"io"
 
-	"github.com/golang/freetype/truetype"
 	"github.com/apremalal/go-chart/drawing"
+	"github.com/golang/freetype/truetype"
 )
 
 // Renderer represents the basic methods required to draw a chart.

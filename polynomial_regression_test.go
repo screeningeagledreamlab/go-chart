@@ -3,8 +3,8 @@ package chart
 import (
 	"testing"
 
-	assert "github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/matrix"
+	assert "github.com/blendlabs/go-assert"
 )
 
 func TestPolynomialRegression(t *testing.T) {

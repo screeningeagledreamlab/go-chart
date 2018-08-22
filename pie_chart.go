@@ -6,8 +6,8 @@ import (
 	"io"
 	"math"
 
-	"github.com/golang/freetype/truetype"
 	"github.com/apremalal/go-chart/util"
+	"github.com/golang/freetype/truetype"
 )
 
 const (
