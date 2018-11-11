@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/util"
+	"github.com/blendlabs/go-assert"
 )
 
 func TestTimeValueFormatterWithFormat(t *testing.T) {

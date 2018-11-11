@@ -133,6 +133,9 @@ func (bc BarChart) Render(rp RendererProvider, w io.Writer) error {
 		bc.drawMinMax(r, canvasBox, yr)
 	}
 	bc.drawBars(r, canvasBox, yr)
+	if len(bc.Series) > 0 {
+		bc.drawDashArray(r, canvasBox, yr)
+	}
 	bc.drawXAxis(r, canvasBox)
 	bc.drawYAxis(r, canvasBox, yr, yt)
 	for index, series := range bc.Series {
@@ -237,6 +240,22 @@ func (bc BarChart) drawMinMax(r Renderer, canvasBox Box, yr Range) {
 		StrokeDashArray: []float64{5.0, 5.0},
 		FillColor:       GetDefaultColor(0).WithAlpha(64),
 	})
+}
+
+// draw min, max lines
+func (bc BarChart) drawDashArray(r Renderer, canvasBox Box, yr Range) {
+	defer r.ResetStyle()
+	r.ResetStyle()
+	yMax := canvasBox.Bottom - yr.Translate(bc.Max)
+	yMin := canvasBox.Bottom - yr.Translate(bc.Min)
+	r.MoveTo(canvasBox.Left, yMax)
+	r.LineTo(canvasBox.Right, yMax)
+	r.MoveTo(canvasBox.Left, yMin)
+	r.LineTo(canvasBox.Right, yMin)
+	r.SetStrokeWidth(1.0)
+	r.SetStrokeDashArray([]float64{5.0, 5.0})
+	r.SetStrokeColor(ColorAlternateGray)
+	r.FillStroke()
 }
 
 func (bc BarChart) drawXAxis(r Renderer, canvasBox Box) {
