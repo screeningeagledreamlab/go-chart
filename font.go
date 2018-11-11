@@ -3,8 +3,8 @@ package chart
 import (
 	"sync"
 
-	"github.com/golang/freetype/truetype"
 	"github.com/apremalal/go-chart/roboto"
+	"github.com/golang/freetype/truetype"
 )
 
 var (

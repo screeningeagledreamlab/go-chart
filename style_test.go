@@ -3,9 +3,9 @@ package chart
 import (
 	"testing"
 
+	"github.com/apremalal/go-chart/drawing"
 	"github.com/blendlabs/go-assert"
 	"github.com/golang/freetype/truetype"
-	"github.com/apremalal/go-chart/drawing"
 )
 
 func TestStyleIsZero(t *testing.T) {

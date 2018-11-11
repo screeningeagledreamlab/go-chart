@@ -4,8 +4,8 @@ import (
 	"image/color"
 	"testing"
 
-	"github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/drawing"
+	"github.com/blendlabs/go-assert"
 )
 
 func TestAnnotationSeriesMeasure(t *testing.T) {

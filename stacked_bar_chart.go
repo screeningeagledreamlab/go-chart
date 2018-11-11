@@ -6,9 +6,9 @@ import (
 	"io"
 	"math"
 
-	"github.com/golang/freetype/truetype"
 	"github.com/apremalal/go-chart/seq"
 	util "github.com/apremalal/go-chart/util"
+	"github.com/golang/freetype/truetype"
 )
 
 // StackedBar is a bar within a StackedBarChart.

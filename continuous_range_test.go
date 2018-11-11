@@ -3,8 +3,8 @@ package chart
 import (
 	"testing"
 
-	"github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/util"
+	"github.com/blendlabs/go-assert"
 )
 
 func TestRangeTranslate(t *testing.T) {

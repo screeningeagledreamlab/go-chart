@@ -3,9 +3,9 @@ package chart
 import (
 	"testing"
 
-	"github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/seq"
 	"github.com/apremalal/go-chart/util"
+	"github.com/blendlabs/go-assert"
 )
 
 type mockValuesProvider struct {

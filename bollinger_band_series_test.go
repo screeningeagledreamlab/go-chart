@@ -5,8 +5,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/seq"
+	"github.com/blendlabs/go-assert"
 )
 
 func TestBollingerBandSeries(t *testing.T) {

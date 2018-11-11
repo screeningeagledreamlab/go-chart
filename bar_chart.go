@@ -6,38 +6,38 @@ import (
 	"io"
 	"math"
 
-	"github.com/golang/freetype/truetype"
 	util "github.com/apremalal/go-chart/util"
+	"github.com/golang/freetype/truetype"
 )
 
 // BarChart is a chart that draws bars on a range.
 type BarChart struct {
-	Title        string
-	TitleStyle   Style
+	Title      string
+	TitleStyle Style
 
 	ColorPalette ColorPalette
-	Min float64
-	Max float64
+	Min          float64
+	Max          float64
 	Width        int
 	Height       int
 	DPI          float64
 
-	BarWidth     int
+	BarWidth int
 
-	Background   Style
-	Canvas       Style
+	Background Style
+	Canvas     Style
 
-	XAxis        Style
-	YAxis        YAxis
+	XAxis Style
+	YAxis YAxis
 
-	BarSpacing   int
+	BarSpacing int
 
-	Font         *truetype.Font
-	defaultFont  *truetype.Font
+	Font        *truetype.Font
+	defaultFont *truetype.Font
 
-	Bars         []Value
-	Series       []Series
-	Elements     []Renderable
+	Bars     []Value
+	Series   []Series
+	Elements []Renderable
 }
 
 // GetDPI returns the dpi for the chart.
@@ -117,7 +117,7 @@ func (bc BarChart) Render(rp RendererProvider, w io.Writer) error {
 
 	canvasBox = bc.getDefaultCanvasBox()
 	yr = bc.getRanges()
-	if yr.GetMax() - yr.GetMin() == 0 {
+	if yr.GetMax()-yr.GetMin() == 0 {
 		return fmt.Errorf("invalid data range; cannot be zero")
 	}
 	yr = bc.setRangeDomains(canvasBox, yr)
@@ -129,12 +129,14 @@ func (bc BarChart) Render(rp RendererProvider, w io.Writer) error {
 		yr = bc.setRangeDomains(canvasBox, yr)
 	}
 	bc.drawCanvas(r, canvasBox)
+	if len(bc.Series) > 0 {
+		bc.drawMinMax(r, canvasBox, yr)
+	}
 	bc.drawBars(r, canvasBox, yr)
 	bc.drawXAxis(r, canvasBox)
 	bc.drawYAxis(r, canvasBox, yr, yt)
-	bc.drawMinMax(r, canvasBox, yr)
 	for index, series := range bc.Series {
-		bc.drawSeries(r, canvasBox, &ContinuousRange{Min:0.0, Max: 10.0,Domain: 100,}, yr, series, index)
+		bc.drawSeries(r, canvasBox, &ContinuousRange{Min: 0.0, Max: 10.0, Domain: 100}, yr, series, index)
 	}
 	bc.drawTitle(r)
 	for _, a := range bc.Elements {
@@ -230,10 +232,10 @@ func (bc BarChart) drawMinMax(r Renderer, canvasBox Box, yr Range) {
 		Bottom: canvasBox.Bottom - yr.Translate(bc.Min),
 	}
 	Draw.Box(r, barBox, Style{
-		Show: true,
-		StrokeColor:  ColorAlternateGray,
+		Show:            true,
+		StrokeColor:     ColorAlternateGray,
 		StrokeDashArray: []float64{5.0, 5.0},
-		FillColor:  GetDefaultColor(0).WithAlpha(64),
+		FillColor:       GetDefaultColor(0).WithAlpha(64),
 	})
 }
 
@@ -249,7 +251,7 @@ func (bc BarChart) drawXAxis(r Renderer, canvasBox Box) {
 		r.Stroke()
 
 		r.MoveTo(canvasBox.Left, canvasBox.Bottom)
-		r.LineTo(canvasBox.Left, canvasBox.Bottom + DefaultVerticalTickHeight)
+		r.LineTo(canvasBox.Left, canvasBox.Bottom+DefaultVerticalTickHeight)
 		r.Stroke()
 
 		cursor := canvasBox.Left
@@ -266,9 +268,9 @@ func (bc BarChart) drawXAxis(r Renderer, canvasBox Box) {
 			}
 
 			axisStyle.WriteToRenderer(r)
-			if index < len(bc.Bars) - 1 {
-				r.MoveTo((barLabelBox.Right + barLabelBox.Left) / 2, canvasBox.Bottom)
-				r.LineTo((barLabelBox.Right + barLabelBox.Left) / 2, canvasBox.Bottom + DefaultVerticalTickHeight)
+			if index < len(bc.Bars)-1 {
+				r.MoveTo((barLabelBox.Right+barLabelBox.Left)/2, canvasBox.Bottom)
+				r.LineTo((barLabelBox.Right+barLabelBox.Left)/2, canvasBox.Bottom+DefaultVerticalTickHeight)
 				r.Stroke()
 			}
 			cursor += width + spacing
@@ -286,7 +288,7 @@ func (bc BarChart) drawYAxis(r Renderer, canvasBox Box, yr Range, ticks []Tick) 
 		r.Stroke()
 
 		r.MoveTo(canvasBox.Left, canvasBox.Bottom)
-		r.LineTo(canvasBox.Left - DefaultHorizontalTickWidth, canvasBox.Bottom)
+		r.LineTo(canvasBox.Left-DefaultHorizontalTickWidth, canvasBox.Bottom)
 		r.Stroke()
 
 		var ty int
@@ -296,12 +298,12 @@ func (bc BarChart) drawYAxis(r Renderer, canvasBox Box, yr Range, ticks []Tick) 
 
 			axisStyle.GetStrokeOptions().WriteToRenderer(r)
 			r.MoveTo(canvasBox.Left, ty)
-			r.LineTo(canvasBox.Left - DefaultHorizontalTickWidth, ty)
+			r.LineTo(canvasBox.Left-DefaultHorizontalTickWidth, ty)
 			r.Stroke()
 
 			axisStyle.GetTextOptions().WriteToRenderer(r)
 			tb = r.MeasureText(t.Label)
-			Draw.Text(r, t.Label, canvasBox.Left - DefaultYAxisMargin - tb.Width(), ty + (tb.Height() >> 1),
+			Draw.Text(r, t.Label, canvasBox.Left-DefaultYAxisMargin-tb.Width(), ty+(tb.Height()>>1),
 				axisStyle)
 		}
 
@@ -424,7 +426,7 @@ func (bc BarChart) getAdjustedCanvasBox(r Renderer, canvasBox Box, yrange Range,
 				lines := Text.WrapFit(r, bar.Label, barLabelBox.Width(), axisStyle)
 				linesBox := Text.MeasureLines(r, lines, axisStyle)
 
-				xaxisHeight = util.Math.MinInt(linesBox.Height() + (2 * DefaultXAxisMargin), xaxisHeight)
+				xaxisHeight = util.Math.MinInt(linesBox.Height()+(2*DefaultXAxisMargin), xaxisHeight)
 			}
 		}
 

@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/drawing"
+	"github.com/blendlabs/go-assert"
 )
 
 func TestVectorRendererPath(t *testing.T) {

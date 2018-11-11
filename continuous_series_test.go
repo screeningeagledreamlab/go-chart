@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	assert "github.com/blendlabs/go-assert"
 	"github.com/apremalal/go-chart/seq"
+	assert "github.com/blendlabs/go-assert"
 )
 
 func TestContinuousSeries(t *testing.T) {
