@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	assert "github.com/blendlabs/go-assert"
+	assert "github.com/apremalal/go-assert"
 	"github.com/apremalal/go-chart/util"
 )
 

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/apremalal/go-chart/drawing"
-	"github.com/blendlabs/go-assert"
+	"github.com/apremalal/go-assert"
 	"github.com/golang/freetype/truetype"
 )
 

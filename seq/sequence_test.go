@@ -3,7 +3,7 @@ package seq
 import (
 	"testing"
 
-	assert "github.com/blendlabs/go-assert"
+	assert "github.com/apremalal/go-assert"
 )
 
 func TestSequenceEach(t *testing.T) {

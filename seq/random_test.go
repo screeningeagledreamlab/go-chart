@@ -3,7 +3,7 @@ package seq
 import (
 	"testing"
 
-	assert "github.com/blendlabs/go-assert"
+	assert "github.com/apremalal/go-assert"
 )
 
 func TestRandomRegression(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"math"
 
 	"github.com/apremalal/go-chart/drawing"
-	util "github.com/blendlabs/go-util"
+	util "github.com/apremalal/go-util"
 	"github.com/golang/freetype/truetype"
 )
 

@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/apremalal/go-chart/util"
-	assert "github.com/blendlabs/go-assert"
+	assert "github.com/apremalal/go-assert"
 )
 
 func TestMarketHoursRangeGetDelta(t *testing.T) {
