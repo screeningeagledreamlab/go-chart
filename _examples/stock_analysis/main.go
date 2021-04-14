@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/apremalal/go-chart"
-	"github.com/apremalal/go-chart/drawing"
+	"github.com/screeningeagledreamlab/go-chart"
+	"github.com/screeningeagledreamlab/go-chart/drawing"
 )
 
 func drawChart(res http.ResponseWriter, req *http.Request) {

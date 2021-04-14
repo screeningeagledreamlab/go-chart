@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-assert"
 )
 
 var (

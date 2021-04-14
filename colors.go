@@ -1,6 +1,6 @@
 package chart
 
-import "github.com/apremalal/go-chart/drawing"
+import "github.com/screeningeagledreamlab/go-chart/drawing"
 
 var (
 	// ColorWhite is white.

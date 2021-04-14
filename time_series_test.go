@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestTimeSeriesGetValue(t *testing.T) {

@@ -3,8 +3,8 @@ package chart
 import (
 	"fmt"
 
-	"github.com/apremalal/go-chart/seq"
-	util "github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart/seq"
+	util "github.com/screeningeagledreamlab/go-chart/util"
 )
 
 // LinearRegressionSeries is a series that plots the n-nearest neighbors

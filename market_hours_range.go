@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/apremalal/go-chart/seq"
-	"github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart/seq"
+	"github.com/screeningeagledreamlab/go-chart/util"
 )
 
 // MarketHoursRange is a special type of range that compresses a time range into just the

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	assert "github.com/apremalal/go-assert"
+	assert "github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestPieChart(t *testing.T) {

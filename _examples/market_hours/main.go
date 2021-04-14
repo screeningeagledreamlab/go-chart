@@ -3,9 +3,9 @@ package main
 import (
 	"net/http"
 
-	"github.com/apremalal/go-chart"
-	"github.com/apremalal/go-chart/seq"
-	"github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart"
+	"github.com/screeningeagledreamlab/go-chart/seq"
+	"github.com/screeningeagledreamlab/go-chart/util"
 )
 
 func drawChart(res http.ResponseWriter, req *http.Request) {

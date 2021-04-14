@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/apremalal/go-chart"
+	"github.com/screeningeagledreamlab/go-chart"
 )
 
 func drawChart(res http.ResponseWriter, req *http.Request) {

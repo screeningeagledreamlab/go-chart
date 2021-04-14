@@ -3,7 +3,7 @@ package drawing
 import (
 	"testing"
 
-	assert "github.com/apremalal/go-assert"
+	assert "github.com/screeningeagledreamlab/go-assert"
 )
 
 type point struct {
