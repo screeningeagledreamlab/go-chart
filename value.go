@@ -1,6 +1,6 @@
 package chart
 
-import util "github.com/apremalal/go-util"
+import util "github.com/screeningeagledreamlab/go-util"
 
 // Value is a chart value.
 type Value struct {

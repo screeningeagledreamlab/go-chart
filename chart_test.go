@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/apremalal/go-chart/drawing"
-	"github.com/apremalal/go-chart/seq"
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-chart/drawing"
+	"github.com/screeningeagledreamlab/go-chart/seq"
+	"github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestChartGetDPI(t *testing.T) {

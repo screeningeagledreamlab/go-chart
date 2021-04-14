@@ -1,8 +1,8 @@
 package chart
 
 import (
-	"github.com/apremalal/go-chart/drawing"
-	"github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart/drawing"
+	"github.com/screeningeagledreamlab/go-chart/util"
 )
 
 // Legend returns a legend renderable function.

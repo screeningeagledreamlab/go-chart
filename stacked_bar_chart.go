@@ -6,8 +6,8 @@ import (
 	"io"
 	"math"
 
-	"github.com/apremalal/go-chart/seq"
-	util "github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart/seq"
+	util "github.com/screeningeagledreamlab/go-chart/util"
 	"github.com/golang/freetype/truetype"
 )
 

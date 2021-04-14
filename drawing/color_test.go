@@ -5,7 +5,7 @@ import (
 
 	"image/color"
 
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestColorFromHex(t *testing.T) {

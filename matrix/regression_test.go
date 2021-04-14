@@ -3,7 +3,7 @@ package matrix
 import (
 	"testing"
 
-	assert "github.com/apremalal/go-assert"
+	assert "github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestPoly(t *testing.T) {

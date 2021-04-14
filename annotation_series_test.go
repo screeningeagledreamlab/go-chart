@@ -4,8 +4,8 @@ import (
 	"image/color"
 	"testing"
 
-	"github.com/apremalal/go-chart/drawing"
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-assert"
+	"github.com/screeningeagledreamlab/go-chart/drawing"
 )
 
 func TestAnnotationSeriesMeasure(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/apremalal/go-chart/util"
-	assert "github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-chart/util"
+	assert "github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestMarketHoursRangeGetDelta(t *testing.T) {

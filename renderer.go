@@ -3,7 +3,7 @@ package chart
 import (
 	"io"
 
-	"github.com/apremalal/go-chart/drawing"
+	"github.com/screeningeagledreamlab/go-chart/drawing"
 	"github.com/golang/freetype/truetype"
 )
 

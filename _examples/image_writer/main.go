@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/apremalal/go-chart"
+	"github.com/screeningeagledreamlab/go-chart"
 )
 
 func main() {

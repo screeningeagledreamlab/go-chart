@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/apremalal/go-chart/matrix"
-	util "github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart/matrix"
+	util "github.com/screeningeagledreamlab/go-chart/util"
 )
 
 // PolynomialRegressionSeries implements a polynomial regression over a given

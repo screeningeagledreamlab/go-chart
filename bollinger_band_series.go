@@ -3,7 +3,7 @@ package chart
 import (
 	"fmt"
 
-	"github.com/apremalal/go-chart/seq"
+	"github.com/screeningeagledreamlab/go-chart/seq"
 )
 
 // BollingerBandsSeries draws bollinger bands for an inner series.

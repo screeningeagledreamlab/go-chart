@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestLegend(t *testing.T) {

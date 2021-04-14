@@ -3,7 +3,7 @@ package chart
 import (
 	"testing"
 
-	"github.com/apremalal/go-assert"
+	"github.com/screeningeagledreamlab/go-assert"
 )
 
 func TestXAxisGetTicks(t *testing.T) {

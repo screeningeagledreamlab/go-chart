@@ -6,7 +6,7 @@ go:
 sudo: false
 
 before_script:
-  - go get -u github.com/apremalal/go-assert
+  - go get -u github.com/screeningeagledreamlab/go-assert
   - go get ./...
 
 script:

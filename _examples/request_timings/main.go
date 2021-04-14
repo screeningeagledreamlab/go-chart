@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/apremalal/go-chart"
-	util "github.com/apremalal/go-chart/util"
+	"github.com/screeningeagledreamlab/go-chart"
+	util "github.com/screeningeagledreamlab/go-chart/util"
 )
 
 func parseInt(str string) int {

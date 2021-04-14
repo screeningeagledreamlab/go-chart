@@ -6,7 +6,7 @@ import (
 	"io"
 	"math"
 
-	util "github.com/apremalal/go-chart/util"
+	util "github.com/screeningeagledreamlab/go-chart/util"
 	"github.com/golang/freetype/truetype"
 )
 
